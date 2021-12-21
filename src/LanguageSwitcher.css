@@ -1,0 +1,17 @@
+.LanguageSwitcher {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.LanguageSwitcher-button {
+  background: #61dafb;
+  border: 0;
+  cursor: pointer;
+  padding: 1em;
+}
+
+.LanguageSwitcher-button--active {
+  background: #2295b4;
+  color: white;
+}

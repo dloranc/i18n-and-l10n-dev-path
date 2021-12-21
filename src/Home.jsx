@@ -1,13 +1,15 @@
-import React from 'react';
 import logo from './logo.svg';
 import './Home.css';
 import { Trans, useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
-function Home() {
-  const { t, i18n } = useTranslation();
+const Home = () => {
+  const { t } = useTranslation();
 
   return (
     <div className="Home">
+      <LanguageSwitcher />
+
       <header className="Home-header">
         <img src={logo} className="Home-logo" alt="logo" />
         <p>
