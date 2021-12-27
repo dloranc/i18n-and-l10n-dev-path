@@ -1,4 +1,5 @@
 {
+  "date": "Today's date:",
   "Edit <1>src/Home.tsx</1> and save to reload.": "Edit <1>src/Home.tsx</1> and save to reload.",
-  "Learn React": "Learn React"
+  "learnReact": "Learn React"
 }

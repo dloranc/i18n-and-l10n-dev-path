@@ -4,7 +4,10 @@ import { Trans, useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 
 const Home = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const date = new Date();
+  const dateFormatted = new Intl.DateTimeFormat(i18n.language).format(date);
 
   return (
     <div className="Home">
@@ -12,6 +15,11 @@ const Home = () => {
 
       <header className="Home-header">
         <img src={logo} className="Home-logo" alt="logo" />
+
+        <p>
+          {t('date')} {dateFormatted}
+        </p>
+
         <p>
           <Trans>
             Edit <code>src/Home.tsx</code> and save to reload.
@@ -23,7 +31,7 @@ const Home = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {t('Learn React')}
+          {t('learnReact')}
         </a>
       </header>
     </div>
