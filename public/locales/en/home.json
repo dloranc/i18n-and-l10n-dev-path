@@ -1,6 +1,6 @@
 {
   "date": "Today's date:",
-  "Edit <1>src/Home.tsx</1> and save to reload.": "Edit <1>src/Home.tsx</1> and save to reload.",
+  "editHome": "Edit <1>src/Home.tsx</1> and save to reload.",
   "opinions_zero": "No opinions",
   "opinions_one": "{{count}} opinion",
   "opinions_other": "{{count}} opinions",

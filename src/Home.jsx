@@ -4,7 +4,7 @@ import { Trans, useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 
 const Home = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('home');
 
   const date = new Date();
   const dateFormatted = new Intl.DateTimeFormat(i18n.language).format(date);
@@ -22,13 +22,21 @@ const Home = () => {
         </p>
 
         <p>
-          <Trans>
+          {t('No key in tranlation files', 'default value')}
+        </p>
+
+        <Trans i18nKey="checkDefault" t={t}>
+          <strong>default value</strong>
+        </Trans>
+
+        <p>
+          <Trans i18nKey="editHome" t={t}>
             Edit <code>src/Home.tsx</code> and save to reload.
           </Trans>
         </p>
         <p>
-          <Trans i18nKey="opinions" count={opinions}>
-            {{ count: opinions }} opinions.
+          <Trans i18nKey="opinions" t={t} count={opinions}>
+            {{ count: opinions }} opinions
           </Trans>
         </p>
         <a
