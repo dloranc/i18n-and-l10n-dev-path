@@ -8,6 +8,7 @@ const Home = () => {
 
   const date = new Date();
   const dateFormatted = new Intl.DateTimeFormat(i18n.language).format(date);
+  const opinions = 10;
 
   return (
     <div className="Home">
@@ -23,6 +24,11 @@ const Home = () => {
         <p>
           <Trans>
             Edit <code>src/Home.tsx</code> and save to reload.
+          </Trans>
+        </p>
+        <p>
+          <Trans i18nKey="opinions" count={opinions}>
+            {{ count: opinions }} opinions.
           </Trans>
         </p>
         <a
